@@ -1,0 +1,17 @@
+version: 1.0
+stages:
+  stage1:
+    jobs:
+    - - cmjob1
+jobs:
+  cmjob1:
+    description: source cloning job
+    type: source-checkout
+    timeout: 30
+    parameters:
+      service: github
+      integration: github_Navin-03
+      repo: master
+      branch: main
+
+
